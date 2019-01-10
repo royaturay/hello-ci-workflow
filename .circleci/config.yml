@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+  
     docker:
       # specify the version you desire here
       - image: node:8.11.1
@@ -12,9 +13,10 @@ jobs:
     steps:
       - checkout
       
-      - run:
+      - run: 
           name: build Docker image
           command: |
+            TAG=0.1.$CIRCLE_BUILD_NUM
             docker build -t hello-ci-workflow .
             docker run -d -p 3000:3000 hello-ci-workflow; sleep 10
         
