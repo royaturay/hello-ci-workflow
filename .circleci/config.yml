@@ -1,0 +1,11 @@
+# .circleci/config.yml
+docker:
+  - image: node:8.2.1
+
+jobs:
+  - test:
+      override:
+        - ./node_modules/.bin/mocha
+  - test-page:
+      override:
+        - ./node_modules/.bin/mocha        
