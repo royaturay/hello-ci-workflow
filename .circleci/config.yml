@@ -5,7 +5,7 @@
 version: 2
 jobs:
   build:
-    - docker:
+    docker:
       # specify the version you desire here
       - image: node:8.11.1
 
