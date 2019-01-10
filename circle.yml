@@ -1,8 +1,6 @@
 # circle.yml
-machine:
+machine: # 虛擬機的環境
   node:
-    version: 0.10
-
-test:
-  override:
-    - ./node_modules/.bin/mocha
+    version: 8.11.1
+  test:
+    - npm test
